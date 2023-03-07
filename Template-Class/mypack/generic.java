@@ -1,5 +1,5 @@
 package mypack;
-import java.io.*;
+// import java.io.*;
 import java.util.*;
 
 public class generic{
@@ -43,14 +43,14 @@ public class generic{
         // printer.print();
 
         // 6)
-        List<Integer> inList = new List<>();
+        List<Integer> inList = new ArrayList<>();
         inList.add(3);
-        printList();
+        printList(inList);
 
         // 6)7)
-        List<cat> inList = new List<>();
-        inList.add(new cat());
-        printList();
+        List<cat> inList2 = new ArrayList<>();
+        inList2.add(new cat());
+        printList(inList2);
 
     }
 
@@ -70,9 +70,9 @@ public class generic{
             - Though, List is a subclass of Object, it still will not work because List<Integer> is not a subclass of Object.
             - We have to use WildCard <?> : Don't know what exactly that generic type will be.
     */
-    // private static void printList(List<?> myList){
-    //     System.out.println();
-    // }
+    private static void printList(List<?> myList){
+        System.out.println();
+    }
 
     // 7) we can also bound the WildCard with other classes - <? extends animal>
     // private static void printList(List<? extends animal> myList){
